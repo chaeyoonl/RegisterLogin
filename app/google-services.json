@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "637894287388",
+    "firebase_url": "https://test-50390.firebaseio.com",
+    "project_id": "test-50390",
+    "storage_bucket": "test-50390.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637894287388:android:123dfd5cf1974ee9e1bfd9",
+        "android_client_info": {
+          "package_name": "com.app.registerlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637894287388-3fti2mddvfl9opukg5lhgen84k18th5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ0D2uio6Y3_6kC5OKhaqpPfo3_NDUSYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637894287388-3fti2mddvfl9opukg5lhgen84k18th5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
