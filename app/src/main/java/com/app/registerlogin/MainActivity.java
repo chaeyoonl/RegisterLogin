@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         frag_chat = new ChatFrag();
         frag_profile = new ProfileFrag();
 
+
         setFrag(0); //첫화면
 
 
@@ -117,4 +120,57 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+
+        inflater.inflate(R.menu.main_menu, menu);
+
+        return true;
+    }
+
+    //우측상단 메뉴
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item)
+    {
+        Toast toast = Toast.makeText(getApplicationContext(),"", Toast.LENGTH_LONG);
+
+
+
+        switch(item.getItemId())
+        {
+            case R.id.action_live:
+                toast.setText("중계");
+                break;
+            case R.id.action_team:
+                toast.setText("동호회 구하기");
+                break;
+            case R.id.action_import:
+                toast.setText("대회 정보");
+                break;
+            case R.id.action_rank:
+                toast.setText("랭킹");
+                break;
+            case R.id.action_map:
+                toast.setText("지도");
+                Intent homeIntent = new Intent(this, MainMap.class);
+                startActivity(homeIntent);
+
+                break;
+            case R.id.action_logout:
+                toast.setText("로그아웃");
+                break;
+        }
+
+
+
+        toast.show();
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
 }
+
