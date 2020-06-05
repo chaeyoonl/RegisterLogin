@@ -3,6 +3,7 @@ package com.app.registerlogin;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,21 +16,40 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FriendFrag extends Fragment {
 
     ImageButton img;
 
-    private View view;
+    View view;
+
+    DatabaseReference myRef;
+
+    RecyclerView mRecyclerView;
+    RecyclerView.Adapter mAdapter;
+    RecyclerView.LayoutManager mLayoutManager;
+    List<ChatData> chatList;
+    String nick = "nick3";
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.frag_friend,container,false);
+        view = inflater.inflate(R.layout.frag_friend, container, false);
 
 
-        ImageButton img = (ImageButton)view.findViewById(R.id.imagepancil);
+        ImageButton img = (ImageButton) view.findViewById(R.id.imagepancil);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +64,7 @@ public class FriendFrag extends Fragment {
         });
 
         return view;
-    }
+
 
 
 
@@ -74,10 +94,7 @@ public class FriendFrag extends Fragment {
      */
 
 
-
-
-
-
+    }
 
 
 
