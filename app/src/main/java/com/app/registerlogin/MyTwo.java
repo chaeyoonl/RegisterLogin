@@ -26,9 +26,12 @@ public class MyTwo extends AppCompatActivity {
     public  RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<ChatData> chatList;
+    private List<ChatData> title;
     private String nick = "nick3";
+    //private String nicks = "nick3";
 
     private EditText EditText_chat;
+    private EditText EditText_player;
     private Button Button_send;
     private DatabaseReference myRef;
 
@@ -45,6 +48,7 @@ public class MyTwo extends AppCompatActivity {
 
         Button_send = findViewById(R.id.Button_send);
         EditText_chat = findViewById(R.id.EditText_chat);
+        EditText_player = findViewById(R.id.EditText_player);
 
 
 
@@ -54,12 +58,17 @@ public class MyTwo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String msg = EditText_chat.getText().toString(); //msg
+                String msg2 = EditText_player.getText().toString(); //msg
 
                 if(msg != null) {
                     ChatData chat = new ChatData();
                     chat.setNickname(nick);
                     chat.setMsg(msg);
+                    chat.setMsg(msg2);
                     myRef.push().setValue(chat);
+                    //chat.setMsg(msg2);
+                    //myRef.push().setValue(chat);
+
                 }
 
             }
@@ -71,7 +80,8 @@ public class MyTwo extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         chatList = new ArrayList<>();
-        mAdapter = new ChatAdapter(chatList, MyTwo.this, nick);
+        title = new ArrayList<>();
+        mAdapter = new ChatAdapter(chatList, title, MyTwo.this, nick);
 
         mRecyclerView.setAdapter(mAdapter);
 
