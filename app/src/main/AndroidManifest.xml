@@ -12,30 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MyTwo"></activity>
-        <activity android:name=".MainMap"></activity>
-
+        <activity android:name=".post"></activity>
+        <activity android:name=".MyTwo" />
+        <activity android:name=".MainMap" />
         <activity
             android:name=".Loading"
             android:theme="@style/loding">
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-    <intent-filter>
-        <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-        <data
-            android:host="google.com"
-            android:scheme="http" />
-    </intent-filter>
-    </activity>
+                <data
+                    android:host="google.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
         <activity android:name=".FriendFrag" />
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
 

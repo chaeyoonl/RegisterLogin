@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> {
-    private List<ChatData> mDataset;
-    private List<ChatData> myTitle;
-    //private String Title;
+    private List<ChatData> mDataset;    //내용물 들어가는 부분 {"1", "2", "3"}
+    //private List<ChatData> myTitle;
+    private String Title;
     private String myNickName;
 
 
@@ -50,10 +50,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ChatAdapter(List<ChatData> myDataset, List<ChatData> Title, Context context, String myNickName) {
-        //{"1","2"}
+    public ChatAdapter(List<ChatData> myDataset, Context context, String myNickName) {
+        //{"1","2", "3"}
         mDataset = myDataset;
-        myTitle = Title;
+        //myTitle = Title;
         this.myNickName = myNickName;
     }
 
@@ -109,7 +109,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
     public void addChat(ChatData chat) {
         mDataset.add(chat);
+        //myTitle.add(chat);
         notifyItemInserted(mDataset.size()-1); //갱신
+        //0,1,2 = 3
     }
 
 }

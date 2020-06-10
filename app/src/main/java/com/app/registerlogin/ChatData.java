@@ -7,19 +7,21 @@ public class ChatData implements Serializable {
     private String msg2;
     private String nickname;
 
-
     public String getMsg() {
         return msg;
     }
 
-
-
     public void setMsg(String msg) {
         this.msg = msg;
-        this.msg2 = msg2;
     }
 
+    public String getMsg2() {
+        return msg2;
+    }
 
+    public void setMsg2(String msg2) {
+        this.msg2 = msg2;
+    }
 
     public String getNickname() {
         return nickname;
@@ -28,4 +30,8 @@ public class ChatData implements Serializable {
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
+
+
+
+
 }

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/place_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="제목"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/place_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="위치"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/place_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="종목"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/place_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="금액"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/place_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="영업 시간"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/place_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="전화번호"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/place_write"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="내용"
+            android:inputType="textPersonName"
+            android:lines="10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/place_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="홍보 갤러리"
+                android:inputType="textMultiLine"
+                android:lines="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/place_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="사진" />
+
+            <Button
+                android:id="@+id/place_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="동영상" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/place_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="확인" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

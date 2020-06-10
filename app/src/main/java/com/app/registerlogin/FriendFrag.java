@@ -1,21 +1,20 @@
 package com.app.registerlogin;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,6 +29,7 @@ import java.util.List;
 
 public class FriendFrag extends Fragment {
 
+
     ImageButton img;
 
     View view;
@@ -39,6 +39,8 @@ public class FriendFrag extends Fragment {
     RecyclerView mRecyclerView;
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mLayoutManager;
+
+
     List<ChatData> chatList;
     String nick = "nick3";
 
@@ -49,10 +51,23 @@ public class FriendFrag extends Fragment {
         view = inflater.inflate(R.layout.frag_friend, container, false);
 
 
+        Intent intent = new Intent(
+                getActivity().getApplicationContext(), // 현재 화면의 제어권자
+                post.class); // 다음 넘어갈 클래스 지정
+        startActivity(intent); // 다음 화면으로 넘어간다
+
+
+
+
+        //FragmentManager fragmentManager = getSupportFragmentManager();
+        //FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+
         ImageButton img = (ImageButton) view.findViewById(R.id.imagepancil);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 Intent intent = new Intent(
                         getActivity().getApplicationContext(), // 현재 화면의 제어권자
@@ -60,10 +75,26 @@ public class FriendFrag extends Fragment {
                 startActivity(intent); // 다음 화면으로 넘어간다
 
 
+
+
             }
         });
 
         return view;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -95,10 +126,6 @@ public class FriendFrag extends Fragment {
 
 
     }
-
-
-
-
 
 }
 

@@ -14,13 +14,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/my_recycler_view"
-            android:scrollbars="vertical"
+            android:id="@+id/my_recycler_views"
             android:layout_width="match_parent"
-            android:layout_height="500dp" />
+            android:layout_height="500dp"
 
-
+            android:scrollbars="vertical" />
 
         <ImageButton
 
