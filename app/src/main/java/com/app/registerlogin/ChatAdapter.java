@@ -18,7 +18,7 @@ import java.util.List;
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> {
     private List<ChatData> mDataset;    //내용물 들어가는 부분 {"1", "2", "3"}
     //private List<ChatData> myTitle;
-    private String Title;
+    //private String Title;
     private String myNickName;
 
 
@@ -34,12 +34,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
         public TextView TextView_msg2;
 
 
+
         public View rootView;
         public MyViewHolder(View v) {
             super(v);
             TextView_nickname = v.findViewById(R.id.TextView_nickname);
             TextView_msg = v.findViewById(R.id.TextView_msg);
             TextView_msg2 = v.findViewById(R.id.TextView_msg2);
+
 
 
             rootView = v;
@@ -80,7 +82,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
         holder.TextView_nickname.setText(chat.getNickname());
         holder.TextView_msg.setText(chat.getMsg());
-        holder.TextView_msg2.setText(chat.getMsg());
+        holder.TextView_msg2.setText(chat.getMsg2());
 
         if(chat.getNickname().equals(this.myNickName)) {
             holder.TextView_msg.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
